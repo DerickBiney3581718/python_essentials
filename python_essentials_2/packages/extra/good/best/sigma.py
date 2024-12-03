@@ -2,7 +2,7 @@
 
 """ example module: extra.good.best.sigma """
 
-def FunS():
+def funS():
 	return "Sigma"
 
 if __name__ == "__main__":
