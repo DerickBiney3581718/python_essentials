@@ -1,21 +1,23 @@
 import time
 
-class TrackedVehicle:
+class Vehicle:
+    def change_direction(left, on):
+        pass
+    def turn(left):
+        change_direction(left,True)
+        time.sleep(0.25)
+        change_direction(left, False)
+class TrackedVehicle(Vehicle):
+    def change_direction(left, on):
+        control_track(left, on)
     def control_track(left, stop):
         pass
 
-    def turn(left):
-        control_track(left, True)
-        time.sleep(0.25)
-        control_track(left, False)
 
-
-class WheeledVehicle:
+class WheeledVehicle(Vehicle):
     def turn_front_wheels(left, on):
         pass
-
-    def turn(left):
-        turn_front_wheels(left, True)
-        time.sleep(0.25)
-        turn_front_wheels(left, False)
-    
+    def change_direction(left, on):
+        turn_front_wheels(left, on)
+        
+# !the inheritance path cannot be altered. don't fuck up the method resolution order -> class Bottome(Top, Middle) ??
