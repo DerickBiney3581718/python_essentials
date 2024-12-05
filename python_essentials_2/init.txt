@@ -1,0 +1,9 @@
+abstract entities | interfaces to programmer -> handlers or streams 
+|
+streams -> system procs -> actual files
+
+i/o -> buffers or caches -> disk
+
+Python classes able to create stream objects for handling files 
+Binary -> BufferedIOBase
+Text -> TextIOBase
