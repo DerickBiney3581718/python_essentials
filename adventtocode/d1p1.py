@@ -13,7 +13,7 @@ def get_input():
             location_ids_1.append(int(id1))
             location_ids_2.append(int(id2))           
             line =  inputStream.readline()
-            
+        inputStream.close()
         return location_ids_1 , location_ids_2
     except IOError as e:
         print(strerror(e.errno))
